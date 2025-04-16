@@ -15,8 +15,8 @@ importers:
         specifier: ^13.1.0
         version: 13.1.0(vue@3.5.13)
       toolpop:
-        specifier: ^0.2.4
-        version: 0.2.5(vue@3.5.13)
+        specifier: ^0.2.7
+        version: 0.2.7(vue@3.5.13)
       vue:
         specifier: ^3.5.13
         version: 3.5.13
@@ -408,8 +408,8 @@ packages:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
 
-  toolpop@0.2.5:
-    resolution: {integrity: sha512-pCxrdg9a/C7gx5CkWF0ZJQQ1JBJFtaqz9LBPLHuQvd1TKQnLeOAnmS0Wt8jS/x43zIWBIm27rGibRRxB3hosag==}
+  toolpop@0.2.7:
+    resolution: {integrity: sha512-F8LrFrtPagbEk+95GiB6Kr46CoZSV6H2HnWFMTIfg3S1xbcnWwKTQNp1dbYLE60SjEqRz7mwAz77UWOyAOsbRQ==}
     peerDependencies:
       vue: ^3.0.0
 
@@ -779,7 +779,7 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
-  toolpop@0.2.5(vue@3.5.13):
+  toolpop@0.2.7(vue@3.5.13):
     dependencies:
       '@floating-ui/dom': 1.6.13
       vue: 3.5.13
