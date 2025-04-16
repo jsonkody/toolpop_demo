@@ -39,6 +39,8 @@
 
   <p v-pop:left.html.click.leave="img_2">.html.click.leave boo</p>
 
+  <p v-pop="'   '">empty v-pop should not show</p>
+
   <aside
     v-pop="$t('Drag me and test flipping', 'Chytni mě a otestuj překlápění')"
     ref="el"
