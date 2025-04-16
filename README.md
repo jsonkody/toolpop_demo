@@ -117,4 +117,4 @@ app.directive("pop", pop);
 
 ## 🪪 License
 
-[MIT](https://github.com/JsonKody/toolpop/blob/main/LICENSE) © 2025 [JsonKody](https://github.com/JsonKody)
+[MIT](https://github.com/jsonkody/toolpop/blob/main/LICENSE) © 2025 [JsonKody](https://github.com/jsonkody)
