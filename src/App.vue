@@ -62,8 +62,8 @@ import { useDraggable } from '@vueuse/core';
 import { ref, useTemplateRef } from 'vue';
 
 const count = ref(0);
-const img_1 = `<img src="https://bekinka.cz/images/logo_smile.webp">`;
-const img_2 = `<img src="https://bekinka.cz/images/art/thumb/32_boo.avif" style="border-radius: 99999px; border: 4px solid PaleGreen;">`;
+const img_1 = `<img src="/images/smile.avif">`;
+const img_2 = `<img src="/images//boo.avif" style="border-radius: 99999px; border: 4px solid PaleGreen;">`;
 
 type Lang = 'en' | 'cs';
 
