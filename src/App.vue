@@ -49,9 +49,15 @@
   >
     {{ $t('Drag me', 'Chytni mě') }}
   </aside>
+
+  <div class="links">
+    <a target="_blank" href="https://github.com/jsonkody/toolpop"><IconBrandGithub v-pop="'GitHub'" class="link-icon" /></a>
+    <a target="_blank" href="https://www.npmjs.com/package/toolpop"><IconPackage v-pop="'npm'" class="link-icon" /></a>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { IconBrandGithub, IconPackage } from "@tabler/icons-vue"
 import { useDraggable } from '@vueuse/core';
 import { ref, useTemplateRef } from 'vue';
 

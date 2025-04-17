@@ -18,6 +18,33 @@
   --border-size: 2px;
 }
 
+.rd {
+  border: 1px solid red;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8rem;
+}
+
+.link-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all 0.2s;
+  opacity: 0.4;
+  cursor: pointer;
+  color: #345677;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 body {
   margin: 0;
   display: flex;
