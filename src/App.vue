@@ -42,7 +42,7 @@
   <p v-pop="'   '">empty v-pop should not show</p>
 
   <aside
-    v-pop="$t('Drag me and test flipping', 'Chytni mě a otestuj překlápění')"
+    v-pop="$t('Drag me and test flipping & shifting on viewport', 'Chytni mě a otestuj překlápění a posouvání na viewportu')"
     ref="el"
     :style="style"
     style="position: fixed"
