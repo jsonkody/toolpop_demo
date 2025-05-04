@@ -35,9 +35,9 @@
   <!-- click tooltip -->
   <p v-pop.click.leave="'Simple tooltip'">.click.leave</p>
 
-  <p v-pop:right.html.click="img_1">.html.click bekinka</p>
+  <!-- <p v-pop:right.html.click="img_1">.html.click bekinka</p>
 
-  <p v-pop:left.html.click.leave="img_2">.html.click.leave boo</p>
+  <p v-pop:left.html.click.leave="img_2">.html.click.leave boo</p> -->
 
   <p v-pop="'   '">empty v-pop should not show</p>
 
