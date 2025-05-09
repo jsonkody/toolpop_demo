@@ -33,8 +33,12 @@
   <!-- click tooltip -->
   <p v-pop.click.leave="'Simple tooltip'">.click.leave</p>
 
+  <button v-pop="empty_text" @click="swap_empty">
+    <div class="font-normal">empty v-pop should not show</div>
+    <div class="hr"></div>
+    <div >click to toggle</div>
+  </button>
   <input v-model="empty_text" type="text" />
-  <p v-pop="empty_text" @click="swap_empty">empty v-pop should not show</p>
 
   <aside
     v-pop="
