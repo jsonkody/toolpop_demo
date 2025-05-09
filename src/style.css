@@ -53,6 +53,10 @@ body {
   min-height: 100vh;
 }
 
+/* * {
+  outline: 2px solid rgba(118, 118, 255, 0.24) !important;
+} */
+
 #app {
   display: flex;
   flex-direction: column;
@@ -63,10 +67,17 @@ body {
   /* border: 1px solid red; */
 }
 
+p,
+button,
+aside,
+input {
+  margin: 0.4rem;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+}
+
 p {
   cursor: default;
-  padding: 0.4rem;
-  border-radius: 8px;
   border: var(--border-size) solid transparent;
   transition: background-color 0.2s, border-color 0.2s;
 }
@@ -79,9 +90,6 @@ p:hover {
 aside {
   cursor: grab;
   transition: background-color 0.2s, border-color 0.2s;
-  padding: 0.4rem 1rem;
-  margin: 0.4rem;
-  border-radius: 8px;
   border: var(--border-size) solid transparent;
   backdrop-filter: blur(6px);
 }
@@ -100,14 +108,12 @@ h2 {
 }
 
 h2:hover {
-  border-radius: 8px;
   background: rgba(255, 255, 255, 0.2);
   border: var(--border-size) solid var(--border-color);
 }
 
 button {
   background-color: #f9f9f9;
-  border-radius: 8px;
   border: var(--border-size) solid #bfd3e7;
   padding: 0.6em 1.2em;
   font-size: 1em;

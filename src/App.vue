@@ -9,8 +9,6 @@
 
   <p v-pop:right.html="img_1">.html bekinka</p>
 
-  <!-- <p v-pop:left.html="img_2">.html boo</p> -->
-
   <h2
     v-pop="
       $t('Does it update on language change?', 'Mění se to při změně jazyka?')
@@ -35,13 +33,8 @@
   <!-- click tooltip -->
   <p v-pop.click.leave="'Simple tooltip'">.click.leave</p>
 
-  <!-- <p v-pop:right.html.click="img_1">.html.click bekinka</p>
-
-  <p v-pop:left.html.click.leave="img_2">.html.click.leave boo</p> -->
   <input v-model="empty_text" type="text" />
   <p v-pop="empty_text" @click="swap_empty">empty v-pop should not show</p>
-  <!-- <p>empty_swap:{{ empty_swap }}</p>
-  <p>empty_text:{{ empty_text }}</p> -->
 
   <aside
     v-pop="
@@ -74,7 +67,7 @@ import { ref, useTemplateRef } from "vue";
 
 const count = ref(0);
 const img_1 = `<img src="/images/beki_smile.avif">`;
-const img_2 = `<img src="/images//boo.avif" style="border-radius: 99999px; border: 4px solid PaleGreen;">`;
+
 const empty_text = ref("");
 const show_text = ref(true);
 const empty_swap = ref("something");
