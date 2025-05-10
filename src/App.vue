@@ -74,7 +74,7 @@ const img_1 = `<img src="/images/beki_smile.avif">`;
 
 const empty_text = ref("");
 const show_text = ref(true);
-const empty_swap = ref("something");
+const empty_swap = ref("pon pon pata pon");
 
 function swap_empty() {
   show_text.value = !show_text.value;
