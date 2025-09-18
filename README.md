@@ -1,6 +1,6 @@
 # 💬 Toolpop
 
-## ✨🎨✨ **NEW!** You can now fully customize the tooltip's appearance!
+### ✨🎨✨ **NEW!** You can now fully customize the tooltip's appearance!
 
 💬 **Toolpop** is a lightweight Vue 3 `v-pop` directive for reactive tooltips and simple HTML/image popovers.
 
@@ -57,7 +57,10 @@ import Toolpop from "toolpop";
 // main.ts
 app.use(Toolpop, {
   fontSize: 14,
+  paddingX: 10,
+  paddingY: 0,
   duration: 0.15,
+  fontFamily: "system-ui, sans-serif",
   color: "white",
   backgroundColor: "rgba(0, 0, 0, 0.7)",
   borderColor: "rgba(255, 255, 255, 0.28)",
@@ -99,6 +102,7 @@ interface PopOptions {
   paddingX: number;
   paddingY: number;
   duration: number;
+  fontFamily: string;
   color: string;
   backgroundColor: string;
   borderColor: string;
