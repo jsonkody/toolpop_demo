@@ -1,9 +1,12 @@
 # 💬 Toolpop
-> 🎨 **NEW!** You can now fully customize the tooltip's appearance!
 
-🎯 **Toolpop** is a lightweight Vue 3 `v-pop` directive for reactive tooltips and simple HTML/image popovers.
+## ✨🎨✨ **NEW!** You can now fully customize the tooltip's appearance!
 
-[Live Demo on StackBlitz](https://stackblitz.com/edit/toolpop?file=src%2FApp.vue)
+💬 **Toolpop** is a lightweight Vue 3 `v-pop` directive for reactive tooltips and simple HTML/image popovers.
+
+[DEMO](https://toolpop.jsonkody.cz)
+
+[Live Demo on StackBlitz](https://stackblitz.com/github/JsonKody/toolpop_demo?file=src%2FApp.vue)
 
 ```html
 <p v-pop="'Simple tooltip'">Hover me</p>
@@ -11,14 +14,15 @@
 
 ![screenshot](./screenshot.png)
 
-- 📦 **1 tiny dependency:** [Floating UI](https://floating-ui.com)
-- 🎯 Auto-flipping + positioning with `top`, `right`, etc.
+- 🎁 **tiny - only 1 dependency:** [@floating-ui/dom
+  ](https://www.npmjs.com/package/@floating-ui/dom) [(web)](https://floating-ui.com)
+- ✨ Auto-flipping + positioning with `top`, `right`, etc.
 - ⚡ Supports reactive values, `ref`, `computed`, functions
 - 🧩 Optional HTML/image mode via `.html`
 
 ---
 
-## 📦 Installation
+## 🚀 Installation
 
 with **pnpm**:
 
@@ -40,16 +44,39 @@ npm install toolpop
 // main.ts
 import Toolpop from "toolpop";
 // ...
-app.use(Toolpop); // Registers v-pop globally
+app.use(Toolpop);
+// Registers v-pop globally with default options
 ```
 
-## 🧪 Use as Directive
+With options:
 
 ```ts
 // main.ts
-import { pop } from "toolpop";
+import Toolpop from "toolpop";
 // ...
-app.directive("pop", pop); // Registers v-pop globally
+// main.ts
+app.use(Toolpop, {
+  fontSize: 14,
+  duration: 0.15,
+  color: "white",
+  backgroundColor: "rgba(0, 0, 0, 0.7)",
+  borderColor: "rgba(255, 255, 255, 0.28)",
+  borderRadius: 6,
+  scaleStart: 0.75,
+});
+```
+
+## ✒️ Use as Directive
+
+```ts
+// main.ts
+import { createPop } from "toolpop";
+
+// Registers v-pop globally
+app.directive("pop", createPop()); // name "pop" whatever you want
+
+// .. or with options - every option is optional, so you may pass only what you need
+app.directive("pop", createPop({ color: "orange" }));
 ```
 
 You can also rename it:
@@ -64,21 +91,45 @@ app.directive("gandalf", pop);
 
 ---
 
-## 🛠️ Modifiers
+## ✏️ Options
 
-- `top | right | bottom | left` – tooltip placement (default is `top`, so you can omit it)
+```ts
+interface PopOptions {
+  fontSize: number;
+  paddingX: number;
+  paddingY: number;
+  duration: number;
+  color: string;
+  backgroundColor: string;
+  borderColor: string;
+  borderRadius: number;
+  scaleStart: number;
+}
+```
+
+---
+
+## ⚙️ Modifiers
+
+- `top`, `right`, `bottom`, `left` – tooltip placement (`top` is default, so you can omit it)
 - `html` – interpret value as raw HTML (e.g. images or rich markup)
+- `click` – shows the tooltip on click instead of hover
+  - `leave` – hides the tooltip on mouseleave (only useful with `.click`)
 
 ---
 
 ## 💡 Example
 
-[Live Demo on StackBlitz](https://stackblitz.com/edit/toolpop?file=src%2FApp.vue)
+[DEMO](https://toolpop.jsonkody.cz)
+
+[Live Demo on StackBlitz](https://stackblitz.com/github/JsonKody/toolpop_demo?file=src%2FApp.vue)
 
 Simple static text:
 
 ```html
 <p v-pop="'Hello world!'">Hover me</p>
+<!-- You need to insert string, or function that return string -->
+<!-- Or Vue reactive value as ref, computed ... -->
 ```
 
 Reactive value:
@@ -96,6 +147,13 @@ Raw HTML image:
 <p v-pop.html="my_image">Image tooltip</p>
 ```
 
+`.click` and `.leave`:
+
+```html
+<!-- Click-activated tooltip that hides on mouseleave -->
+<button v-pop.click.leave="'Click tooltip'">Click me</button>
+```
+
 ---
 
 ## 📁 Local use (optional)
@@ -104,7 +162,7 @@ Copy `src/pop.ts` into your project and register locally:
 
 ```ts
 import { pop } from "@/directives/pop"; // path where you put it ...
-app.directive("pop", pop);
+app.directive("pop", pop); // name "pop" whatever you want
 ```
 
 ---
@@ -113,6 +171,7 @@ app.directive("pop", pop);
 
 - [jsonkody.cz](https://jsonkody.cz)
 - [num.jsonkody.cz](https://num.jsonkody.cz)
+- [snejk.bekinka.cz](https://snejk.bekinka.cz)
 
 ---
 
