@@ -1,8 +1,8 @@
 import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
-// import { pop } from "toolpop";
-import { createPop, type PopOptions } from "./directives/pop";
+import { createPop, type PopOptions } from "toolpop";
+// import { createPop, type PopOptions } from "./directives/pop";
 
 const app = createApp(App);
 
