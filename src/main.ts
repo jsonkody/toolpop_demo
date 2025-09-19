@@ -6,7 +6,7 @@ import Toolpop from "toolpop";
 
 const app = createApp(App);
 
-// try tweak the options
+// Feel free to tweak these options. The values shown are the library's defaults.
 app.use(Toolpop, {
   fontSize: 14,
   paddingX: 8,
@@ -20,6 +20,5 @@ app.use(Toolpop, {
   scaleStart: 0.75,
   blur: 14,
 });
-// Note: These are the default options, showing their initial values.
 
 app.mount("#app");
