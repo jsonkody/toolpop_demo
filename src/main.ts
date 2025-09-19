@@ -1,13 +1,12 @@
 import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
-import { createPop, type PopOptions } from "toolpop";
-// import { createPop, type PopOptions } from "./directives/pop";
+import Toolpop from "toolpop";
 
 const app = createApp(App);
 
 // try tweak the options
-const options: Partial<PopOptions> = {
+app.use(Toolpop, {
   fontSize: 14,
   paddingX: 10,
   paddingY: 0,
@@ -19,8 +18,6 @@ const options: Partial<PopOptions> = {
   borderRadius: 6,
   scaleStart: 0.75,
   blur: 14,
-};
-
-app.directive("pop", createPop(options));
+});
 
 app.mount("#app");
