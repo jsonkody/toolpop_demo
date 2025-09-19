@@ -9,7 +9,7 @@ const app = createApp(App);
 // try tweak the options
 app.use(Toolpop, {
   fontSize: 14,
-  paddingX: 10,
+  paddingX: 8,
   paddingY: 0,
   duration: 0.15,
   fontFamily: "system-ui, sans-serif",
