@@ -20,5 +20,6 @@ app.use(Toolpop, {
   scaleStart: 0.75,
   blur: 14,
 });
+// btw those are default options, so you know what values they have ;)
 
 app.mount("#app");
