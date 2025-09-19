@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import "./style.css";
 import App from "./App.vue";
 import Toolpop from "toolpop";
+// import Toolpop from "./directives/plugin";
 
 const app = createApp(App);
 
