@@ -19,6 +19,7 @@ app.use(Toolpop, {
   borderRadius: 6,
   scaleStart: 0.75,
   blur: 14,
+  closeDelay: 2000,
 });
 
 app.mount("#app");
