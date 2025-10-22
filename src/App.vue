@@ -51,9 +51,7 @@
       <div class="example-row">
         <button v-pop:bottom.html="simpleMenu">Simple menu</button>
 
-        <button v-pop:bottom.html.click.clickany="simpleMenu">
-          Click menu
-        </button>
+        <button v-pop:bottom.html.clickany="simpleMenu">.clickany menu</button>
 
         <button v-pop:bottom.html.click.clickany.mouseinlock="cartMenu">
           Smart menu (.mouseinlock)
@@ -163,10 +161,10 @@ const cartMenu = computed(
   <h3 style="margin: 0 0 12px 0; color: #333; font-size: 16px;">🛒 Shopping Cart</h3>
   
   <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-    <button onclick="document.querySelector('#cart-count').textContent = Math.max(1, parseInt(document.querySelector('#cart-count').textContent) - 1)" 
+    <button class="flex-center" onclick="document.querySelector('#cart-count').textContent = Math.max(1, parseInt(document.querySelector('#cart-count').textContent) - 1)" 
             style="width: 32px; height: 32px; border: 1px solid #ddd; background: #f9f9f9; border-radius: 6px; cursor: pointer; font-size: 18px;">−</button>
     <span id="cart-count" style="font-size: 18px; font-weight: 500; min-width: 24px; text-align: center;">${cartCount.value}</span>
-    <button onclick="document.querySelector('#cart-count').textContent = parseInt(document.querySelector('#cart-count').textContent) + 1" 
+    <button class="flex-center" onclick="document.querySelector('#cart-count').textContent = parseInt(document.querySelector('#cart-count').textContent) + 1" 
             style="width: 32px; height: 32px; border: 1px solid #ddd; background: #f9f9f9; border-radius: 6px; cursor: pointer; font-size: 18px;">+</button>
   </div>
   
